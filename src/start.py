@@ -1,9 +1,9 @@
 import pygame
-import random
 import sys
 
 from model.pipeLine import Pipeline
 from model.bird import Bird
+from utils import utils
 
 
 pygame.init()  # 初始化pygame
@@ -13,7 +13,8 @@ screen = pygame.display.set_mode(size)  # 显示窗口
 color = (255, 255, 255)
 
 font = pygame.font.SysFont("Arial", 50)  # 设置字体和大小
-background = pygame.image.load("./src/assets/background.png")
+background = pygame.image.load(
+    utils.resource_path("./assets/background.png"))
 clock = pygame.time.Clock()  # 设置时钟
 FPS = 30
 

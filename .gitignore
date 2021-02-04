@@ -1,1 +1,5 @@
+dist
 anenv
+__pycache__
+build
+start.spec

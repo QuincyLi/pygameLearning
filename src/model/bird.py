@@ -1,13 +1,16 @@
 import pygame
 
+from utils import utils
+
 
 class Bird(object):
     def __init__(self):
         self.birdRect = pygame.Rect(65, 50, 50, 50)
         self.birdStatus = [
-            pygame.image.load("./src/assets/1.png"),
-            pygame.image.load("./src/assets/2.png"),
-            pygame.image.load("./src/assets/dead.png"),
+            pygame.image.load(utils.resource_path("./assets/1.png")),
+            pygame.image.load(utils.resource_path("./assets/2.png")),
+            pygame.image.load(utils.resource_path(
+                "./assets/dead.png")),
         ]
         self.status = 0  # 默认飞行状态
         self.birdX = 120  # 鸟所在X轴坐标,即是向右飞行的速度
